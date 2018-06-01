@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.m \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/ScrollView/RCTScrollContentView.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/RCTView.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/ScrollView/RCTScrollView.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/React/Views/ScrollView/RCTScrollableProtocol.h

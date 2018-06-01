@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/Libraries/Image/RCTImageCache.m \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/Libraries/Image/RCTImageCache.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTImageLoader.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTResizeMode.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestHandler.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestDelegate.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTNetworking.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventEmitter.h \
+  /Users/pballer1192/coding/doughnuts/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTNetworkTask.h \
+  /Users/pballer1192/coding/doughnuts/node_modules/react-native/Libraries/Image/RCTImageUtils.h
