@@ -1,6 +1,8 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, Platform, SafeAreaView, StatusBar, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, Image, Platform, SafeAreaView, StatusBar, Dimensions, FlatList, ListItem, ScrollView, AsyncStorage } from 'react-native'
 import { withNavigation } from 'react-navigation'
+import ListView from '../Components/ListView/ListView'
+import ProgressBar from '../Components/ProgressBar/ProgressBar'
 
 class LandingScreen extends React.Component {
 
@@ -12,64 +14,66 @@ class LandingScreen extends React.Component {
         }
     }
 
-    componentDidUpdate() {
-        console.log(this.state)
+    static navigationOptions = {
+        header: null
+    }
+    fetchDoughnutData = () => {
+        try {
+            fetch('https://private-bb68d-apchallenge.apiary-mock.com/donuts')
+                .then(response =>
+                    response ?
+                        response.json().then(jsonObj => this.setState({ doughnutData: jsonObj.types }, async () => {
+                            this.setState({ loading: false })
+                            try {
+                                await AsyncStorage.setItem('doughnutData', JSON.stringify(this.state.doughnutData));
+                            } catch (error) {
+                                console.log('Unexpected Error', error)
+                            }
+                        }))
+                        : console.log('Whoops the response is null')
+                )
+        } catch (error) { return console.log('Unexpected Error', error) }
     }
 
-    componentDidMount() {
-        this.setState({ loading: true }, () => {
+    componentDidMount = () => {
+        this.setState({ loading: true }, async () => {
             try {
-                fetch('https://private-bb68d-apchallenge.apiary-mock.com/donuts')
-                    .then(response =>
-                        response ?
-                            response.json().then(jsonObj => this.setState({ doughnutData: jsonObj.types }, () => {
-                                this.setState({ loading: false })
-                            }))
-                            : console.log('Whoops the response is null')
-                    )
-            } catch (error) { return console.log('Unexpected Error', error) }
-
+                const storedData = await AsyncStorage.getItem('doughnutData');
+                storedData !== null ? this.setState({ doughnutData: JSON.parse(storedData), loading: false }) : this.fetchDoughnutData()
+            } catch (error) {
+                console.log('Error fetching old data!', error)
+            }
         })
-
-
-
     }
     render() {
         console.disableYellowBox = true;
         console.ignoredYellowBox = ['Remote debugger'];
         return (
             <View style={styles.mainContainer}>
-                {Platform.OS === 'ios'
-                    ? <SafeAreaView
-                        style={{
-                            backgroundColor: 'black',
-                            height: 5,
-                        }}>
-                        <StatusBar barStyle="light-content" backgroundColor="#ecf0f1" />
+                <SafeAreaView
+                    style={{
+                        backgroundColor: "#6200EE",
+                        height: 5,
+                    }}>
+                    <StatusBar barStyle="light-content" backgroundColor="#6200EE" />
+                </SafeAreaView>
 
-                    </SafeAreaView>
-                    : undefined}
-                <View style={styles.titleContainer}>
-                    <Text style={styles.titleText}>Welcome to the Doughnut Shop!</Text>
-                </View>
                 <View style={styles.listContainer}>
                     {this.state.loading ?
-                        <Text>loading</Text>
+                        <View style={styles.progressBarContainer}>
+                            <ProgressBar />
+                        </View>
                         :
-                        this.state.doughnutData.map((ele, index) => {
-                            console.log(ele.img)
-
-
-                            return <View style={styles.individualDoughnutPreviewContainer}>
-                                <Image resizeMethod='resize' style={styles.doughnutPreview} source={ele.img[4] !== 's' ?
-                                    { uri: 'https://thumbs.dreamstime.com/b/cute-ice-lolly-error-page-not-found-message-image-melting-icrecream-69635826.jpg' } : { uri: ele.img }} alt={"A delicious Doughnut"} />
-                                <Text>{ele.name}</Text>
+                        <ScrollView>
+                            <View style={styles.titleContainer}>
+                                <Text style={styles.titleText}>Doughnut Shop!</Text>
                             </View>
-                        })
+                            <ListView data={this.state.doughnutData} />
+                        </ScrollView>
 
                     }
                 </View>
-            </View>
+            </View >
         )
     }
 }
@@ -79,20 +83,30 @@ export default withNavigation(LandingScreen)
 const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
+        backgroundColor: '#6200EE'
     },
     titleContainer: {
-        justifyContent: 'center'
+        marginTop: 10,
+        marginRight: 30,
+        marginLeft: 30,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     titleText: {
-        fontSize: 24
+        fontSize: 24,
+        color: 'white',
+        fontWeight: 'bold'
     },
-    individualDoughnutPreviewContainer: {
-        width: Dimensions.get('window').width,
-        paddingRight: 20,
-        paddingLeft: 20
+    listContainer: {
+        flex: 1
     },
     doughnutPreview: {
         height: 75,
         width: 75
+    },
+    progressBarContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })
